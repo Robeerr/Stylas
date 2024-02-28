@@ -45,7 +45,7 @@ export default async function Home({ searchParams }: Props) {
         </div>
       </div>
 
-      <div className="container mx-auto mt-10">
+      <div className="mt-10 p-3">
         <ProductGrid products={products} />
         <Pagination totalPages={totalPages} />
       </div>

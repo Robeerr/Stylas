@@ -1,47 +1,40 @@
 "use client";
 import { authenticate } from "@/actions";
-import { useAddressStore } from "@/store";
 import clsx from "clsx";
+import Link from "next/link";
 import React, { useEffect } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 
-import { IoEye, IoEyeOff, IoInformationOutline } from "react-icons/io5";
+import { IoInformationOutline } from "react-icons/io5";
 
 export const LoginForm = () => {
   const [state, dispatch] = useFormState(authenticate, undefined);
 
   useEffect(() => {
     if (state === "Success") {
-      useAddressStore.getState().setDireccion({
-        nombre: "",
-        apellidos: "",
-        direccion: "",
-        direccion2: "",
-        codigoPostal: "",
-        pais: "",
-        ciudad: "",
-        telefono: "",
-      });
       window.location.replace("/");
     }
   }, [state]);
 
   return (
     <>
-      <form action={dispatch} className="flex justify-center self-center z-10">
-        <div className="p-12 bg-white mx-auto rounded-3xl w-96 ">
+      <form
+        action={dispatch}
+        className="flex justify-center self-center z-10 w-full max-w-md px-4"
+      >
+        <div className="p-12 bg-white mx-auto rounded-3xl w-96 mt-10">
           <div className="mb-7">
             <h3 className="font-semibold text-2xl text-gray-800">
               Inicia sesión
             </h3>
             <p className="text-gray-400">
               No tienes cuenta?{" "}
-              <a
-                href="/auth/register"
+              <Link
+                href={"/auth/register"}
                 className="text-sm text-blue-500 hover:text-blue-400"
               >
                 Regístrate
-              </a>
+              </Link>
             </p>
           </div>
 
@@ -92,18 +85,6 @@ export const LoginForm = () => {
 
             <div className="flex flex-col items-center justify-center">
               <LoginButton />
-            </div>
-
-            <div className="flex items-center justify-center space-x-2 my-5">
-              <span className="h-px w-20 bg-gray-200"></span>
-              <span className="text-gray-300 font-normal">o</span>
-              <span className="h-px w-20 bg-gray-200"></span>
-            </div>
-
-            <div className="flex justify-center gap-5 w-full ">
-              {/* Botones de inicio de sesión de Google y Facebook y Github aquí */}
-              <button className="btn-primary">Google</button>
-              <button className="btn-primary">Facebook</button>
             </div>
           </div>
 

@@ -36,9 +36,9 @@ export const RegisterForm = () => {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex justify-center self-center z-10"
+        className="flex justify-center self-center z-10 w-full max-w-md px-4"
       >
-        <div className="p-12 bg-white mx-auto rounded-3xl w-96 ">
+        <div className="p-12 bg-white mx-auto rounded-3xl w-96 mt-10">
           <div className="mb-7">
             <h3 className="font-semibold text-2xl text-gray-800">Regístrate</h3>
             <p className="text-gray-400">
@@ -119,18 +119,6 @@ export const RegisterForm = () => {
             </div>
             <div className="flex flex-col items-center justify-center">
               <RegisterButton />
-            </div>
-
-            <div className="flex items-center justify-center space-x-2 my-5">
-              <span className="h-px w-20 bg-gray-200"></span>
-              <span className="text-gray-300 font-normal">o</span>
-              <span className="h-px w-20 bg-gray-200"></span>
-            </div>
-
-            <div className="flex justify-center gap-5 w-full ">
-              {/* Botones de inicio de sesión de Google y Facebook y Github aquí */}
-              <button className="btn-primary">Google</button>
-              <button className="btn-primary">Facebook</button>
             </div>
           </div>
 
