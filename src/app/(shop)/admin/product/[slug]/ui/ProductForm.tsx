@@ -120,10 +120,10 @@ export const ProductForm = ({ product, categories }: Props) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid px-5 mb-16 grid-cols-1 sm:px-0 sm:grid-cols-2 gap-3"
+      className="grid px-5 mb-16 grid-cols-1 sm:px-0 sm:grid-cols-2 gap-3 p-6"
     >
       {/* Textos */}
-      <div className="w-full">
+      <div className="w-full p-6">
         <div className="flex flex-col mb-2">
           <span>Título</span>
           <input
@@ -202,7 +202,7 @@ export const ProductForm = ({ product, categories }: Props) => {
       </div>
 
       {/* Selector de tallas y fotos */}
-      <div className="w-full">
+      <div className="w-full p-6">
         <div className="flex flex-col mb-2">
           <span>Inventario</span>
           <input

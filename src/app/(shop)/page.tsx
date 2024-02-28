@@ -5,6 +5,7 @@ import { getPaginatedProductsWithImages } from "@/actions";
 import { Arrow, Pagination, ProductGrid, Title } from "@/components";
 import Banner from "../../../public/imgs/BannerStylas.jpg";
 import { IoIosArrowDown } from "react-icons/io";
+import { auth } from "@/auth.config";
 
 interface Props {
   searchParams: {
@@ -22,10 +23,15 @@ export default async function Home({ searchParams }: Props) {
     redirect("/");
   }
 
+  const session = await auth();
+
+  if (!session?.user) {
+    redirect("/auth/login ");
+  }
+
   return (
     <>
       <div>
-        {/* Aplica la clase hidden en tamaños sm y md para ocultar la imagen */}
         <div
           className="relative w-full overflow-hidden lg:block hidden"
           style={{ height: "1000px" }}

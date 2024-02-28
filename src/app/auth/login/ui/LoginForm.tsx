@@ -69,7 +69,7 @@ export const LoginForm = () => {
             </div>
 
             <div
-              className="flex h-8 items-end space-x-1"
+              className="flex items-end space-x-1"
               aria-live="polite"
               aria-atomic="true"
             >

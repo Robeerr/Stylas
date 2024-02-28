@@ -29,12 +29,10 @@ export default function LoginPage() {
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-4">
         <div className="text-center backdrop-filter backdrop-blur-lg bg-white/30 p-6 rounded-lg max-w-md w-full">
           <h1 className="text-3xl sm:text-5xl font-bold text-gray-800 drop-shadow-lg">
-            Bienvenido a Stylas
+            Bienvenido a Stylas | Shop
           </h1>
-          <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 drop-shadow-lg">
-            | Shop
-          </h2>
-          <p className="text-sm sm:text-xl text-gray-200 mt-2 drop-shadow-md">
+
+          <p className="text-sm sm:text-xl text-black-200 mt-2 drop-shadow-md">
             Tu tienda online de ropa marca TESLA y accesorios para hombre y
             mujer.
           </p>
