@@ -1,0 +1,10 @@
+.my-swal-popup {
+  padding: 20px !important; /* Aumentar el padding */
+  background-color: #f0f0f0 !important; /* Cambiar el color de fondo */
+  border-radius: 10px !important; /* Redondear las esquinas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important; /* Agregar sombra */
+}
+
+.custom-swal {
+  background-color: #fefefe; /* Un fondo claro, por ejemplo */
+}
