@@ -33,6 +33,9 @@ export const AddressForm = () => {
   });
 
   const onSubmit = async (data: FormInput) => {
+    useAddressStore.setState({ direccion: data });
+    localStorage.setItem("userAddress", JSON.stringify(data));
+
     await setUserAddress(data, session!.user.id);
     router.push("/checkout");
   };

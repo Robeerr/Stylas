@@ -8,6 +8,7 @@ import { IoCardOutline } from "react-icons/io5";
 
 export default async function OrdersPage() {
   const { ok, orders = [] } = await getOrderByUser();
+  console.log(ok, orders);
 
   if (!ok) {
     redirect("/auth/login");
@@ -28,9 +29,7 @@ export default async function OrdersPage() {
                 <div className="text-sm font-medium text-gray-900">
                   #ID: {order.id.split("-").at(-1)}
                 </div>
-                <div className="text-sm text-gray-900 font-light">
-                  {order.OrderAddress?.nombre} {order.OrderAddress?.apellidos}
-                </div>
+
                 <div className="flex items-center text-sm text-gray-900 font-light">
                   {order.isPaid ? (
                     <>
